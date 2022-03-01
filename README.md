@@ -425,16 +425,8 @@ To prevent a certain file or directory from being linted, add it to `.eslintigno
 
 To maintain a consistent coding style across different IDEs, the project contains `.editorconfig`
 
-## Contributing
+### Dynamic Form Generation
+[Reference Blog](https://www.aaron-powell.com/posts/2020-12-10-dynamic-forms-with-react-hooks/)
 
-Contributions are more than welcome! Please check out the [contributing guide](CONTRIBUTING.md).
-
-## Inspirations
-
-- [danielfsousa/express-rest-es2017-boilerplate](https://github.com/danielfsousa/express-rest-es2017-boilerplate)
-- [madhums/node-express-mongoose](https://github.com/madhums/node-express-mongoose)
-- [kunalkapadia/express-mongoose-es6-rest-api](https://github.com/kunalkapadia/express-mongoose-es6-rest-api)
-
-## License
-
-[MIT](LICENSE)
+[SandBox](https://codesandbox.io/s/react-dynamic-form-9ryxt?from-embed=&file=/src/formData.js:24-4072
+)
