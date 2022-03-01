@@ -6,7 +6,11 @@ const { roles } = require('../config/roles');
 
 const userSchema = mongoose.Schema(
   {
-    name: {
+    user: {
+      type: ObjectId,
+      ref: 'User',
+    },
+    username: {
       type: String,
       required: true,
       trim: true,
@@ -44,6 +48,39 @@ const userSchema = mongoose.Schema(
       type: Boolean,
       default: false,
     },
+    last_login: {
+      type : Date,
+      required : true,
+    },
+    is_superuser: {
+      type : Boolean,
+      required : true,
+    },
+    first_name: {
+      type : String,
+      required : true,
+    },
+    last_name: {
+      type : String,
+      required : true,
+    },
+    is_staff: {
+      type : Boolean,
+    },
+    is_active: {
+      type : Boolean,
+    },
+    date_joined: {
+      type : Date,
+    },
+    department: {
+      type : BigInt,
+      required : true,
+    },
+    desk_number: {
+      type : BigInt,
+      required : true,
+    }
   },
   {
     timestamps: true,
