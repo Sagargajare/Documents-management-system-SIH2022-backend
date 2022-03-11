@@ -49,36 +49,36 @@ const userSchema = mongoose.Schema(
       type: Boolean,
       default: false,
     },
-    last_login: {
+    lastLogin: {
       type: Date,
       required: true,
     },
-    is_superuser: {
+    isSuperuser: {
       type: Boolean,
       required: true,
     },
-    first_name: {
+    firstName: {
       type: String,
       required: true,
     },
-    last_name: {
+    lastName: {
       type: String,
       required: true,
     },
-    is_staff: {
+    isStaff: {
       type: Boolean,
     },
-    is_active: {
+    isActive: {
       type: Boolean,
     },
-    date_joined: {
+    dateJoined: {
       type: Date,
     },
     department: {
       type: Number,
       required: true,
     },
-    desk_number: {
+    deskNumber: {
       type: Number,
       required: true,
     },
