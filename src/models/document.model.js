@@ -3,7 +3,7 @@ const uuid = require('uuid');
 
 const documentSchema = mongoose.Schema({
   id: {
-    type: Number,
+    type: String,
     required: true,
   },
   uuidv1: {
@@ -15,14 +15,19 @@ const documentSchema = mongoose.Schema({
   type: {
     type: String,
     required: true,
-  },
-  uploadedBy: {
-    type: Number,
-    required: true,
+    enum: ['ResidenceVerification', 'CasteVerification', 'DisabilityVerification'],
   },
   note: {
     type: String,
+    required: true,
   },
+  uploadedBy: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User',
+      required: true,
+    },
+  ],
 });
 
 const Document = mongoose.model('Document', documentSchema);

@@ -2,11 +2,13 @@ const mongoose = require('mongoose');
 
 const remarkSchema = mongoose.Schema({
   id: {
-    type: Number,
+    type: mongoose.Schema.Types.Uuid,
+    ref: 'Application',
     required: true,
   },
   remarkBy: {
-    type: Number,
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
     required: true,
   },
   remark: {

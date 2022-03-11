@@ -1,21 +1,24 @@
 const mongoose = require('mongoose');
-const { ObjectId } = require('mongoose');
 
 const requestSchema = mongoose.Schema({
-  user: {
-    type: ObjectId,
+  id: {
+    type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
+    required: true,
   },
   sentBy: {
-    type: Number,
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
     required: true,
   },
   sentTo: {
-    type: Number,
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
     required: true,
   },
   status: {
     type: String,
+    enum: ['accept', 'reject', 'revert'],
     required: true,
   },
   comment: {
@@ -23,7 +26,8 @@ const requestSchema = mongoose.Schema({
     required: true,
   },
   application: {
-    type: Number,
+    type: mongoose.Schema.Types.Uuid,
+    ref: 'Application',
     required: true,
   },
 });

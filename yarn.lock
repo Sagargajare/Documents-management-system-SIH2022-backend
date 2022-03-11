@@ -3358,6 +3358,11 @@
   dependencies:
     "safer-buffer" ">= 2.1.2 < 3"
 
+"id@^0.0.0":
+  "integrity" "sha1-nKMKivoQz6uXAz0ehkeVjzyAC7Y="
+  "resolved" "https://registry.npmjs.org/id/-/id-0.0.0.tgz"
+  "version" "0.0.0"
+
 "ignore-by-default@^1.0.1":
   "integrity" "sha1-SMptcvbGo68Aqa1K5odr44ieKwk="
   "resolved" "https://registry.npmjs.org/ignore-by-default/-/ignore-by-default-1.0.1.tgz"

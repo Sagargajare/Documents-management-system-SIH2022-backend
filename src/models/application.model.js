@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const uuid = require('node-uuid');
-const Enum = require('enum');
 
 const applicationSchema = mongoose.Schema({
   id: {
@@ -10,15 +9,18 @@ const applicationSchema = mongoose.Schema({
     },
   },
   status: {
-    type: Enum,
+    type: String,
+    enum: ['reject', 'in-process', 'approved'],
     required: true,
   },
   initiatedBy: {
-    type: Number,
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
     required: true,
   },
   applicationType: {
-    type: Enum,
+    type: String,
+    enum: ['application', 'leave', 'verification'],
     required: true,
   },
   data: {
