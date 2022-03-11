@@ -1,31 +1,31 @@
 const mongoose = require('mongoose');
 const { ObjectId } = require('mongoose');
-//Request Schema
+
 const requestSchema = mongoose.Schema({
   user: {
     type: ObjectId,
     ref: 'User',
   },
-  sent_by: {
-    type: BigInt,
+  sentBy: {
+    type: Number,
     required: true,
   },
-  sent_to: {
-    type: BigInt,
+  sentTo: {
+    type: Number,
     required: true,
   },
   status: {
-    type: Enumerator,
+    type: String,
     required: true,
   },
   comment: {
-    type: Comment,
+    type: String,
     required: true,
   },
   application: {
-    type: BigInt,
+    type: Number,
     required: true,
-  }
+  },
 });
 
 const Request = mongoose.model('Request', requestSchema);
