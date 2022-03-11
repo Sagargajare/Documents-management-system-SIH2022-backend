@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const remarkSchema = mongoose.Schema({
-  id: {
+  _id: {
     type: mongoose.Schema.Types.Uuid,
     ref: 'Application',
     required: true,
