@@ -1,21 +1,26 @@
 const mongoose = require('mongoose');
 
-const remarkSchema = mongoose.Schema({
-  _id: {
-    type: mongoose.Schema.Types.Uuid,
-    ref: 'Application',
-    required: true,
+const remarkSchema = mongoose.Schema(
+  {
+    applicationId: {
+      type: mongoose.Schema.Types.String,
+      ref: 'Application',
+      required: true,
+    },
+    remarkBy: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User',
+      required: true,
+    },
+    remark: {
+      type: String,
+      required: true,
+    },
   },
-  remarkBy: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'User',
-    required: true,
-  },
-  remark: {
-    type: String,
-    required: true,
-  },
-});
+  {
+    timestamps: true,
+  }
+);
 
-const Remark = mongoose.model('Remark', remarkSchema);
-module.exports = Remark;
+const ApplicationRemark = mongoose.model('ApplicationRemark', remarkSchema);
+module.exports = ApplicationRemark;

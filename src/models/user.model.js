@@ -1,17 +1,17 @@
 const mongoose = require('mongoose');
 const validator = require('validator');
 const bcrypt = require('bcryptjs');
-const { ObjectId } = require('mongoose');
 const { toJSON, paginate } = require('./plugins');
 const { roles } = require('../config/roles');
 
 const userSchema = mongoose.Schema(
   {
-    user: {
-      type: ObjectId,
-      ref: 'User',
+    firstName: {
+      type: String,
+      required: true,
+      trim: true,
     },
-    username: {
+    lastName: {
       type: String,
       required: true,
       trim: true,
@@ -49,37 +49,12 @@ const userSchema = mongoose.Schema(
       type: Boolean,
       default: false,
     },
-    lastLogin: {
-      type: Date,
-      required: true,
-    },
-    isSuperuser: {
-      type: Boolean,
-      required: true,
-    },
-    firstName: {
-      type: String,
-      required: true,
-    },
-    lastName: {
-      type: String,
-      required: true,
-    },
-    isStaff: {
-      type: Boolean,
-    },
-    isActive: {
-      type: Boolean,
-    },
-    dateJoined: {
-      type: Date,
-    },
     department: {
-      type: Number,
+      type: String,
       required: true,
     },
-    deskNumber: {
-      type: Number,
+    designation: {
+      type: String,
       required: true,
     },
   },
