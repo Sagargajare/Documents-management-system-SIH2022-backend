@@ -5,6 +5,7 @@ const docsRoute = require('./docs.route');
 const applicationRoute = require('./application.route');
 const applicationLocationRoute = require('./applicationLocation.route');
 const documentRoute = require('./document.route');
+const requestRoute = require('./request.route');
 const config = require('../../config/config');
 
 const router = express.Router();
@@ -29,6 +30,10 @@ const defaultRoutes = [
   {
     path: '/document',
     route: documentRoute,
+  },
+  {
+    path: '/request',
+    route: requestRoute,
   },
 ];
 

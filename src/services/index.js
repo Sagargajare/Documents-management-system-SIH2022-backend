@@ -5,3 +5,4 @@ module.exports.userService = require('./user.service');
 module.exports.applicationService = require('./application.service');
 module.exports.applicationLocationService = require('./applicationLocation.service');
 module.exports.documentService = require('./document.service');
+module.exports.requestService = require('./request.service');
