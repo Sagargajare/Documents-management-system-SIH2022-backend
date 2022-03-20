@@ -3,7 +3,7 @@ const catchAsync = require('../utils/catchAsync');
 const { documentService } = require('../services');
 
 const allDocuments = catchAsync(async (req, res) => {
-  const documents = await documentService.getAllApplication();
+  const documents = await documentService.getAllDocument();
   res.status(httpStatus.OK).send({ data: documents });
 });
 const getDocument = catchAsync(async (req, res) => {
@@ -15,7 +15,7 @@ const createDocument = catchAsync(async (req, res) => {
   res.status(httpStatus.OK).send({ data: document });
 });
 const deleteDocument = catchAsync(async (req, res) => {
-  const document = await documentService.deleteApplication(req.params.id);
+  const document = await documentService.deleteDocument(req.params.id);
   res.status(httpStatus.OK).send({ data: document });
 });
 const updateDocument = catchAsync(async (req, res) => {
