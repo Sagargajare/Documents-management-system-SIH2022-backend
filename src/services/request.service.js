@@ -8,8 +8,8 @@ const getRequestById = async (id) => {
   const request = await Request.findById(id);
   return request;
 };
-const createRequest = async (body) => {
-  const request = new Request(body);
+const createRequest = async (body, userId) => {
+  const request = new Request({ ...body, sentBy: userId });
   await request.save();
   return request;
 };

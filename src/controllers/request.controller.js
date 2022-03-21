@@ -11,7 +11,7 @@ const getRequest = catchAsync(async (req, res) => {
   res.status(httpStatus.OK).send({ data: request });
 });
 const createRequest = catchAsync(async (req, res) => {
-  const request = await requestService.createRequest(req.body);
+  const request = await requestService.createRequest(req.body, '618661a06a10361bb0918947');
   res.status(httpStatus.OK).send({ data: request });
 });
 const deleteRequest = catchAsync(async (req, res) => {
