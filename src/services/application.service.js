@@ -8,8 +8,8 @@ const getApplicationById = async (id) => {
   const application = await Application.findById(id);
   return application;
 };
-const createApplication = async (body) => {
-  const application = new Application(body);
+const createApplication = async (body, userId) => {
+  const application = new Application({ ...body, initiatedBy: userId });
   await application.save();
   return application;
 };

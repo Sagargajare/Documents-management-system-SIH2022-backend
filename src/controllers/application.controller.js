@@ -11,7 +11,7 @@ const getApplication = catchAsync(async (req, res) => {
   res.status(httpStatus.OK).send({ data: application });
 });
 const createApplication = catchAsync(async (req, res) => {
-  const application = await applicationService.createApplication(req.body);
+  const application = await applicationService.createApplication(req.body, '618661a06a10361bb0918947');
   res.status(httpStatus.OK).send({ data: application });
 });
 const deleteApplication = catchAsync(async (req, res) => {
