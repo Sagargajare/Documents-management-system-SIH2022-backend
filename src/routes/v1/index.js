@@ -7,6 +7,8 @@ const applicationLocationRoute = require('./applicationLocation.route');
 const documentRoute = require('./document.route');
 const requestRoute = require('./request.route');
 const config = require('../../config/config');
+const departmentRoute = require('./department.route');
+const applicationRemarkRoute = require('./applicationRemark.route');
 
 const router = express.Router();
 
@@ -24,6 +26,7 @@ const defaultRoutes = [
     route: applicationRoute,
   },
   {
+
     path: '/applicationLocation',
     route: applicationLocationRoute,
   },
@@ -34,6 +37,14 @@ const defaultRoutes = [
   {
     path: '/request',
     route: requestRoute,
+
+    path: '/department',
+    route: departmentRoute,
+  },
+  {
+    path: '/applicationRemark',
+    route: applicationRemarkRoute,
+
   },
 ];
 

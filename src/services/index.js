@@ -6,3 +6,5 @@ module.exports.applicationService = require('./application.service');
 module.exports.applicationLocationService = require('./applicationLocation.service');
 module.exports.documentService = require('./document.service');
 module.exports.requestService = require('./request.service');
+module.exports.departmentService = require('./department.service');
+module.exports.applicationRemarkService = require('./applicationRemark.service');
