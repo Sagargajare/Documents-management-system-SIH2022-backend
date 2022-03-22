@@ -26,7 +26,6 @@ const defaultRoutes = [
     route: applicationRoute,
   },
   {
-
     path: '/applicationLocation',
     route: applicationLocationRoute,
   },
@@ -37,14 +36,14 @@ const defaultRoutes = [
   {
     path: '/request',
     route: requestRoute,
-
+  },
+  {
     path: '/department',
     route: departmentRoute,
   },
   {
     path: '/applicationRemark',
     route: applicationRemarkRoute,
-
   },
 ];
 
