@@ -8,7 +8,7 @@ const router = express.Router();
 router.get('/', departmentController.allDepartments);
 router.get('/:id', departmentController.getDepartment);
 router.post('/', validate(departmentValidation.create), departmentController.createDepartment);
-router.patch('/:id', departmentController.updateDepartment);
+router.patch('/:id', validate(departmentValidation.update), departmentController.updateDepartment);
 router.delete('/:id', departmentController.deleteDepartment);
 
 module.exports = router;

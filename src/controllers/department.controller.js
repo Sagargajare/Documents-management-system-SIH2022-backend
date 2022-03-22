@@ -11,7 +11,7 @@ const getDepartment = catchAsync(async (req, res) => {
   res.status(httpStatus.OK).send({ data: department });
 });
 const createDepartment = catchAsync(async (req, res) => {
-  const department = await departmentService.createDepartment(req.body);
+  const department = await departmentService.createDepartment(req.body, '618661a06a10361bb091894');
   res.status(httpStatus.OK).send({ data: department });
 });
 const deleteDepartment = catchAsync(async (req, res) => {

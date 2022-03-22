@@ -8,7 +8,7 @@ const router = express.Router();
 router.get('/', applicationRemarkController.allApplicationRemarks);
 router.get('/:id', applicationRemarkController.getApplicationRemark);
 router.post('/', validate(applicationRemarkValidation.create), applicationRemarkController.createApplicationRemark);
-router.patch('/:id', applicationRemarkController.updateApplicationRemark);
+router.patch('/:id', validate(applicationRemarkValidation.update), applicationRemarkController.updateApplicationRemark);
 router.delete('/:id', applicationRemarkController.deleteApplicationRemark);
 
 module.exports = router;

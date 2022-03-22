@@ -7,6 +7,14 @@ const create = {
   }),
 };
 
+const update = {
+  body: Joi.object().keys({
+    name: Joi.string().required(),
+    about: Joi.string().required(),
+  }),
+};
+
 module.exports = {
   create,
+  update,
 };
