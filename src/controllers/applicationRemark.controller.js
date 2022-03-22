@@ -11,7 +11,7 @@ const getApplicationRemark = catchAsync(async (req, res) => {
   res.status(httpStatus.OK).send({ data: applicationRemark });
 });
 const createApplicationRemark = catchAsync(async (req, res) => {
-  const applicationRemark = await applicationRemarkService.createApplicationRemark(req.body);
+  const applicationRemark = await applicationRemarkService.createApplicationRemark(req.body, '618661a06a10361bb0918947');
   res.status(httpStatus.OK).send({ data: applicationRemark });
 });
 const deleteApplicationRemark = catchAsync(async (req, res) => {
