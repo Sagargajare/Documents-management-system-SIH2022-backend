@@ -8,8 +8,8 @@ const getApplicationRemarkById = async (id) => {
   const applicationRemark = await ApplicationRemark.findById(id);
   return applicationRemark;
 };
-const createApplicationRemark = async (body) => {
-  const applicationRemark = new ApplicationRemark(body);
+const createApplicationRemark = async (body, userId) => {
+  const applicationRemark = new ApplicationRemark({ ...body, remarkBy: userId });
   await applicationRemark.save();
   return applicationRemark;
 };
