@@ -8,8 +8,8 @@ const getApplicationLocationById = async (id) => {
   const applicationLocation = await ApplicationLocation.findById(id);
   return applicationLocation;
 };
-const createApplicationLocation = async (body) => {
-  const applicationLocation = new ApplicationLocation(body);
+const createApplicationLocation = async (body, userId) => {
+  const applicationLocation = new ApplicationLocation({ ...body, receivedFrom: userId });
   await applicationLocation.save();
   return applicationLocation;
 };
