@@ -11,7 +11,7 @@ const getDocument = catchAsync(async (req, res) => {
   res.status(httpStatus.OK).send({ data: document });
 });
 const createDocument = catchAsync(async (req, res) => {
-  const document = await documentService.createDocument(req.body);
+  const document = await documentService.createDocument(req.body, '618661a06a10361bb0918947');
   res.status(httpStatus.OK).send({ data: document });
 });
 const deleteDocument = catchAsync(async (req, res) => {

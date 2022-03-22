@@ -8,8 +8,8 @@ const getDocumentById = async (id) => {
   const document = await Document.findById(id);
   return document;
 };
-const createDocument = async (body) => {
-  const document = new Document(body);
+const createDocument = async (body, userId) => {
+  const document = new Document({ ...body, uploadedBy: userId });
   await document.save();
   return document;
 };
