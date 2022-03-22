@@ -8,7 +8,7 @@ const router = express.Router();
 router.get('/', applicationController.allApplications);
 router.get('/:id', applicationController.getApplication);
 router.post('/', validate(applicationValidation.create), applicationController.createApplication);
-router.patch('/:id', applicationController.updateApplication);
+router.patch('/:id', validate(applicationValidation.update), applicationController.updateApplication);
 router.delete('/:id', applicationController.deleteApplication);
 
 module.exports = router;

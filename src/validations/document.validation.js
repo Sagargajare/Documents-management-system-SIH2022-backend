@@ -7,6 +7,14 @@ const create = {
   }),
 };
 
+const update = {
+  body: Joi.object().keys({
+    type: Joi.string().required().valid('ResidenceVerification', 'CasteVerification', 'DisabilityVerification'),
+    note: Joi.string().required(),
+  }),
+};
+
 module.exports = {
   create,
+  update,
 };
