@@ -11,7 +11,10 @@ const getApplicationLocation = catchAsync(async (req, res) => {
   res.status(httpStatus.OK).send({ data: applicationLocation });
 });
 const createApplicationLocation = catchAsync(async (req, res) => {
-  const applicationLocation = await applicationLocationService.createApplicationLocation(req.body);
+  const applicationLocation = await applicationLocationService.createApplicationLocation(
+    req.body,
+    '62396b20a1225d10502deb69'
+  );
   res.status(httpStatus.OK).send({ data: applicationLocation });
 });
 const deleteApplicationLocation = catchAsync(async (req, res) => {
