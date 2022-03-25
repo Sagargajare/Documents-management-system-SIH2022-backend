@@ -2,6 +2,7 @@ const express = require('express');
 const authRoute = require('./auth.route');
 const userRoute = require('./user.route');
 const docsRoute = require('./docs.route');
+const dynamicFormRoute = require('./dynamicForm.route');
 const applicationRoute = require('./application.route');
 const applicationLocationRoute = require('./applicationLocation.route');
 const documentRoute = require('./document.route');
@@ -22,6 +23,9 @@ const defaultRoutes = [
     route: userRoute,
   },
   {
+    path: '/form',
+    route: dynamicFormRoute,
+  },{
     path: '/application',
     route: applicationRoute,
   },
@@ -44,7 +48,6 @@ const defaultRoutes = [
   {
     path: '/applicationRemark',
     route: applicationRemarkRoute,
-
   },
 ];
 

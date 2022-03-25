@@ -4,7 +4,7 @@ const config = require('../config/config');
 const swaggerDef = {
   openapi: '3.0.0',
   info: {
-    title: 'node-express-boilerplate API documentation',
+    title: 'Document Management System by Team Fledgling for SIH 2022',
     version,
     license: {
       name: 'MIT',
