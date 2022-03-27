@@ -20,8 +20,8 @@ const applicationSchema = mongoose.Schema(
       required: true,
     },
     applicationType: {
-      type: String,
-      enum: ['application', 'leave', 'verification'],
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'DynamicForm',
       required: true,
     },
     data: {

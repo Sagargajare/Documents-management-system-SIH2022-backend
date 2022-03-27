@@ -25,12 +25,12 @@ const defaultRoutes = [
   {
     path: '/form',
     route: dynamicFormRoute,
-  },{
+  },
+  {
     path: '/application',
     route: applicationRoute,
   },
   {
-
     path: '/applicationLocation',
     route: applicationLocationRoute,
   },
@@ -41,7 +41,8 @@ const defaultRoutes = [
   {
     path: '/request',
     route: requestRoute,
-
+  },
+  {
     path: '/department',
     route: departmentRoute,
   },
