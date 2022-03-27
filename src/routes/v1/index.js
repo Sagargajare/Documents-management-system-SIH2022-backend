@@ -25,7 +25,8 @@ const defaultRoutes = [
   {
     path: '/form',
     route: dynamicFormRoute,
-  },{
+  },
+  {
     path: '/application',
     route: applicationRoute,
   },

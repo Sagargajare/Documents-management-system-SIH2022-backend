@@ -5,7 +5,7 @@ const getAllApplication = async () => {
   return applications;
 };
 const getApplicationById = async (id) => {
-  const application = await Application.findById(id);
+  const application = await Application.findById(id).populate('applicationType');
   return application;
 };
 const createApplication = async (body, userId) => {

@@ -2,9 +2,9 @@ const mongoose = require('mongoose');
 const { toJSON } = require('./plugins');
 
 const dynamicForm = mongoose.Schema({
-  name: {},
-  description: {},
-  formStructure: [],
+  formName: {},
+  formDescription: {},
+  dynamicForm: [],
 });
 dynamicForm.plugin(toJSON);
 
